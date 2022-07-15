@@ -1,0 +1,11 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.quarkus:quarkus-junit5:2.10.2.Final'
+}
