@@ -8,6 +8,7 @@
 
 > output
 > * 목표 요일 (String)
+
 -- --
 ##2.
 * Gold 회원
