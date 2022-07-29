@@ -20,7 +20,7 @@ public class BitSubset {
                     builder.append(source[j]).append(" ");
                 }
             }
-            builder.append(" }");
+            builder.append("}");
             gather.add(builder.toString());
         }
     }
