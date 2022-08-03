@@ -15,6 +15,6 @@ public class MaxSumNumberTest {
         MaxSumNumber maxSumNumber = new MaxSumNumber(nums, pickSize);
         int result = maxSumNumber.max();
         //then:
-        assertThat(result).isEqualTo(998);
+        assertThat(result).isEqualTo(26);
     }
 }
