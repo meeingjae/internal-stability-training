@@ -9,8 +9,6 @@ public class FloodFillTest {
     private final int BOARD_COL = 5;
     private final int BOARD_ROW = 10;
 
-    //Random 함수 mock
-
     @Test
     void 성공() {
         //given:
@@ -20,11 +18,15 @@ public class FloodFillTest {
         int fillNum = 5;    // 색칠할 숫자
         //when:
         floodFill.generateBoard();
+        floodFill.printBoard();
+        System.out.println();
+
         floodFill.fill(pointCol, pointRow, fillNum);
         floodFill.printBoard();
+
         int[][] result = floodFill.getBoard();
         //then:
-        assertThat(result[BOARD_COL-1][BOARD_ROW-1]).isEqualTo(fillNum);
-        assertThat(result[pointCol][pointRow]).isEqualTo(fillNum);
+        assertThat(result[BOARD_COL - 1][BOARD_ROW - 1]).isNotEqualTo(0);
+        assertThat(result[pointCol][pointRow]).isNotEqualTo(0);
     }
 }
