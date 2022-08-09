@@ -1,2 +1,2 @@
-# DFS (깊이 우선 탐색)
+# DFS (깊이 우선 탐색) (Depth First Search)
 -- --
