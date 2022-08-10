@@ -11,7 +11,8 @@ public class NearNodeQueueTest {
         int[] nodes = { 0, 1, 0, 2, 1, 3, 1, 4, 2, 4, 3, 4 };
         //when:
         NearNodeQueue nearNodeQueue = new NearNodeQueue(nodes);
-        int[] result = nearNodeQueue.visit();
+        nearNodeQueue.visit();
+        int[] result = nearNodeQueue.getResult();
         //then:
         assertThat(result[0]).isEqualTo(0);
         assertThat(result[1]).isEqualTo(1);
