@@ -5,6 +5,7 @@ public class MaxPickedNumber {
     private final static int ZERO_INDEX = 0;
     private int[] nums;
     private int pickSize;
+    private int result = 0;
 
     public MaxPickedNumber(int[] nums, int pickSize) {
         this.nums = nums;
@@ -20,7 +21,6 @@ public class MaxPickedNumber {
         if (pick == pickSize) {
             return val;
         }
-        int result = 0;
 
         for (int i = 0; i < nums.length; i++) {
             if ((used & 1 << i) != 0) {
