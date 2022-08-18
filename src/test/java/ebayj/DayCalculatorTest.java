@@ -17,4 +17,16 @@ public class DayCalculatorTest {
         //then:
         assertThat(resultDay).isEqualTo("TUE");
     }
+
+    @Test
+    void beforeTest() {
+        //given:
+        int sourceDate = 3;
+        String sourceDay = "MON";
+        int targetDate = 1;
+        //when:
+        String resultDay = DayCalculator.calculateDate(sourceDate, sourceDay, targetDate);
+        //then:
+        assertThat(resultDay).isEqualTo("SAT");
+    }
 }
