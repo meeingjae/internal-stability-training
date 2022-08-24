@@ -3,8 +3,8 @@ package ebayj;
 public class DayCalculator {
 
     public static String calculateDate(int num, String day, int targetNum) {
-        num %= 7;
-        targetNum %= 7;
+        int source = num %= 7;
+        int target = targetNum %= 7;
 
         String[] days = { "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" };
         int index = 0;
@@ -15,13 +15,15 @@ public class DayCalculator {
                 index++;
             }
         }
-        int resultNum;
-        if (num > targetNum) {
-            resultNum = (num - targetNum) % 7;
-        } else {
-            resultNum = (targetNum - num) % 7;
-        }
 
-        return days[(index + resultNum) % 7];
+        int targetIndex = 0;
+
+        if (source <= target) {
+            targetIndex = target - source;
+            return days[(index + targetIndex) % 7];
+        } else {
+            targetIndex = source - target;
+            return days[(7 + index - targetIndex) % 7];
+        }
     }
 }
